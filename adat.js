@@ -42,3 +42,4 @@ export const LISTA = [
     ar: 57.9,
   },
 ];
+export const VASAROLT = []
