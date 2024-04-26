@@ -11,28 +11,40 @@ belepush a kosár listába vagy növel
 
 
 
-init(LISTA)
 function init(lista) {
 
   let szoveg = kartyaLetrehoz(lista);
   megjelenit(szoveg);
-  rendezEsemeny()
+  rendezEsemeny(lista)
 }
+init(LISTA)
 
-function rendezEsemeny() {
-    const listaOpcioELEM = $(".rendez_select")
+
+function rendezEsemeny(lista) {
+    const listaOpcioELEM = $(".rendezes_select")
+    //console.log(listaOpcioELEM.val())
     listaOpcioELEM.on("change", function () {
-        let ertek = listaOpcioELEM.val()
-        console.log(ertek);
-        if (ertek == 4) {
-            const LISTA = rendez(LISTA,"nev", 1)
+
+        if (listaOpcioELEM.val() === "novNev") {
+            //console.log(listaOpcioELEM.val());
+            const LISTA = rendez(lista,"nev", 1)
             init(LISTA)
 
         }
-        if (ertek == 3) {
-            const LISTA = rendez(LISTA,"nev", -1)
+        if (listaOpcioELEM.val() === "csokkenNev") {
+            //console.log(listaOpcioELEM.val());
+            const LISTA = rendez(lista,"nev", -1)
             init(LISTA)
         }
-
+        if (listaOpcioELEM.val() === "csokkenAr") {
+            //console.log(listaOpcioELEM.val());
+            const LISTA = rendez(lista,"ar", -1)
+            init(LISTA)
+        }
+        if (listaOpcioELEM.val() === "novAr") {
+            //console.log(listaOpcioELEM.val());
+            const LISTA = rendez(lista,"ar", 1)
+            init(LISTA)
+        }
     })
 }

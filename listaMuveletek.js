@@ -41,8 +41,8 @@ export function rendez(lista, kulcs, rIrany) {
   return RLISTA
 }
 export function szures(lista, keresoSzoveg) {
-  const szLISTA = lista.filter(function (ember) {
-      return ember.nev.toUpperCase().includes(keresoSzoveg.toUpperCase())
+  const szLISTA = lista.filter(function (termek) {
+      return termek.nev.toUpperCase().includes(keresoSzoveg.toUpperCase())
   })
   return szLISTA
 }
