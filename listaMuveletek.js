@@ -42,7 +42,9 @@ export function rendez(lista, kulcs, rIrany) {
 }
 export function szures(lista, keresoSzoveg) {
   const szLISTA = lista.filter(function (termek) {
-      return termek.nev.toUpperCase().includes(keresoSzoveg.toUpperCase())
+      return termek.nev.toUpperCase().includes(keresoSzoveg.toUpperCase()) ||
+      termek.hajtas.toUpperCase().includes(keresoSzoveg.toUpperCase())
+
   })
   return szLISTA
 }
