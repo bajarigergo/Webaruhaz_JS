@@ -22,9 +22,43 @@ export function kartyaLetrehoz(LISTA) {
   });
   return txt;
 }
+export function tablazatLetrehoz(lista) {
+  let txt = `<div class="table-responsive">
+        <table class="table table-striped">
+        <thead>
+        <tr>
+        <th>Név</th>
+        <th>Teljesítmény</th>
+        <th>Hajtás</th>
+        <th>Ár</th>
+        <th>Kép</th>
+        <th></th>
+        </tr>
+        </thead>
+        <tbody>
+  `;
+  lista.forEach((element, index) => {
+    txt += `
+        <tr>
+            <td>${element.nev}</td>
+            <td>${element.telj}</td>
+            <td>${element.hajtas}</td>
+            <td>${element.ar}</td>
+            <td><img src='${element.kep}' alt='auto' style= 'width:100px'></td>
+            <td id="torol${index}"><button>🗑️</button></td>
+        </tr>
+    `;
+  });
+  txt += "</tbody></table></div>";
+  return txt;
+}
 
-export function megjelenit(txt) {
+export function megjelenitKartya(txt) {
   const ELEM = $(".termekek");
+  ELEM.html(txt);
+}
+export function megjelenitTabla(txt) {
+  const ELEM = $(".adatok");
   ELEM.html(txt);
 }
 

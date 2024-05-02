@@ -1,10 +1,13 @@
 import { LISTA } from "./adat.js";
 import {
   kartyaLetrehoz,
-  megjelenit,
+  megjelenitKartya,
+  megjelenitTabla,
   rendez,
   szures,
+  tablazatLetrehoz,
 } from "./listaMuveletek.js";
+import { sorBeszur, torol, torolEsemeny } from "./urlap.js";
 
 //megjelenit(kartyaLetrehoz(LISTA))
 
@@ -13,13 +16,19 @@ akkor létrehozol obj: {index:3, db:1}
 belepush a kosár listába vagy növel
 */
 
-function init(lista) {
+export function init(lista) {
   let szoveg = kartyaLetrehoz(lista);
-  megjelenit(szoveg);
+  megjelenitKartya(szoveg);
+  let tablaszoveg = tablazatLetrehoz(lista)
+  megjelenitTabla(tablaszoveg)
+  sorBeszur(lista)
   rendezEsemeny(lista);
 }
+torolEsemeny(LISTA)
 init(LISTA);
 szuresNevSzerint();
+
+
 
 function rendezEsemeny(lista) {
   const listaOpcioELEM = $(".rendezes_select");

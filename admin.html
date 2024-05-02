@@ -32,6 +32,79 @@
         </ul>
       </div>
     </nav>
+    <article>
+      <div class="urlap">
+        <form class="was-validated">
+          <div class="mb-3 mt-3">
+            <label for="nev" class="form-label">Név:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nev"
+              required
+              placeholder="BMW M3"
+              name="nev"
+              pattern=".{3,}"
+            />
+            <div class="valid-feedback">Ok.</div>
+            <div class="invalid-feedback">
+              A név legalább 3 betű.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="telj" class="form-label">Teljesítmény(LE) :</label>
+            <input
+              type="number"
+              class="form-control"
+              id="telj"
+              placeholder="319"
+              required
+              name="kor"
+            />
+            <div class="valid-feedback">Ok.</div>
+          </div>
+          <div class="mb-3">
+            <label for="kor" class="form-label">Hajtáslánc:</label>
+            <input
+              id="hajtastipus"
+              type="text"
+              class="form-control"
+              id=""
+              required
+              placeholder="Összkerékhajtás"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="ar" class="form-label">Ár:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="ar"
+              placeholder="10000000"
+              required
+              name="kor"
+            />
+            <div class="valid-feedback">Ok.</div>
+          </div>
+          <div class="mb-3">
+
+              <label for="kep" class="form-label">Kép</label>
+            <input
+              id="kep"
+              type="text"
+              class="form-control"
+              value="./kepek/.jpg"
+              enabled
+            />
+          </div>
+        </div>
+          <button type="submit" id="submit" class="btn btn-primary">
+            Hozzáad
+          </button>
+        </form>
+      </div>
+      <div class="adatok"></div>
+    </article>
   </main>
   </body>
 </html>
