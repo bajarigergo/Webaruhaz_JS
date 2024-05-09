@@ -14,11 +14,45 @@ import { init } from "./main.js";
                 kep: $("#kep").val()
             };
             console.log($(".valid-feedback").eq(0).css("display"))
-            if($(".valid-feedback").eq(0).css("display") === "block" && 
-            $(".valid-feedback").eq(1).css("display") === "block"){
-                lista.push(adat);
-                init(lista)
+            let validak = false
+            for (let index = 0; index < 5; index++) {
+                if($(".valid-feedback").eq(index).css("display") === "block"){
+                    validak = true
+                }
+                
             }
+            if (validak) {
+                lista.push(adat);
+                    init(lista)
+                    console.log(adat);
+            }
+ 
+        });
+    }
+    export function szemelyesConsolra() {
+        const submitELEM = $("#szemelyes");
+        submitELEM.on("click", function(event){
+            event.preventDefault();
+
+            const adat = {
+                varos: $("#varos").val(),
+                utca: $("#utca").val(),
+                irszam: $("#irszam").val(),
+                nev: $("#nev").val(),
+                kor: $("#kor").val(),
+            };
+            console.log($(".valid-feedback").eq(0).css("display"))
+            let validak = false
+            for (let index = 0; index < 5; index++) {
+                if($(".valid-feedback").eq(index).css("display") === "block"){
+                    validak = true
+                }
+                
+            }
+            if (validak) {
+                    console.log(adat);
+            }
+ 
         });
     }
     export function torol(lista, index){

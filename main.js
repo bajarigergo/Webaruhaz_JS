@@ -7,7 +7,7 @@ import {
   szures,
   tablazatLetrehoz,
 } from "./listaMuveletek.js";
-import { sorBeszur, torol, torolEsemeny } from "./urlap.js";
+import { sorBeszur, szemelyesConsolra, torol, torolEsemeny } from "./urlap.js";
 
 //megjelenit(kartyaLetrehoz(LISTA))
 
@@ -27,6 +27,7 @@ export function init(lista) {
 torolEsemeny(LISTA)
 init(LISTA);
 szuresNevSzerint();
+szemelyesConsolra();
 
 
 

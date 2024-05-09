@@ -44,7 +44,7 @@
                 required
                 placeholder="Szögöd"
                 name="varos"
-                pattern="^[A-Z][\w]$"
+                pattern="^[A-Z]{,3}$"
               />
               <div class="valid-feedback">Ok.</div>
               <div class="invalid-feedback">Város nagy betűvel kezdődjön</div>
@@ -58,7 +58,7 @@
                 required
                 placeholder="Kossuth utca"
                 name="utca"
-                pattern="^[A-Z][\w]$"
+                pattern="^[A-Z]{,3}$"
               />
               <div class="valid-feedback">Ok.</div>
               <div class="invalid-feedback">Utca nagy betűvel kezdődjön</div>
@@ -87,7 +87,7 @@
                 required
                 placeholder="Bendegúz Bende"
                 name="nev"
-                pattern="^[A-Z][\w]{2,}$"
+                pattern="^[A-Z]{,2}/s[A-Z]{,2}$"
               />
               <div class="valid-feedback">Ok.</div>
               <div class="invalid-feedback">
@@ -129,7 +129,7 @@
                 id="no"
               />
             </div>
-            <button type="submit" id="submit" class="btn btn-primary">
+            <button type="submit" id="szemelyes" class="btn btn-primary">
               Mentés
             </button>
           </form>

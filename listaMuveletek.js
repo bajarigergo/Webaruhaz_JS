@@ -4,10 +4,10 @@ export function kartyaLetrehoz(LISTA) {
     txt += `
         <div class="col-sm-5 m-3 p-0 col-lg-3 card">
         <img
-        class="card-img-top"
+        class="img  "
         src="${elem.kep}"
         alt="Card image"
-        style="width: 100%"
+        style="width:100%"
       />
       <div class="card-body d-flex flex-column justify-content-around">        
         <h4 class="card-title nev">${elem.nev}</h4>
