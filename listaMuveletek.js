@@ -2,7 +2,7 @@ export function kartyaLetrehoz(LISTA) {
   let txt = "";
   LISTA.forEach((elem, index) => {
     txt += `
-        <div class="m-3 p-0 col-3 card">
+        <div class="col-sm-5 m-3 p-0 col-lg-3 card">
         <img
         class="card-img-top"
         src="${elem.kep}"
@@ -62,7 +62,9 @@ export function megjelenitTabla(txt) {
   ELEM.html(txt);
 }
 
-export function kosarba(VASAROLT) {}
+export function kosarba(VASAROLT) {
+  
+}
 
 export function rendez(lista, kulcs, rIrany) {
   const RLISTA = lista.sort(function (e1,e2) {
